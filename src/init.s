@@ -3,5 +3,6 @@
 _start:
 
 	auipc sp, 0x0
-	addi sp, sp, 1024
+	li t0, 2048
+	add sp, sp, t0
 	j main

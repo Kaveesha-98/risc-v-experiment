@@ -43,6 +43,14 @@ void printf (const char* text, ...) {
 						char_index++;
 						break;
 					}
+					case 'x': {
+					 	uint64_t number = va_arg(args, int64_t);
+					 	for (int8_t i=15; i >= 0; i=i-1)
+					 		*(char*) 0x10000000 = (((number >> (i << 2)) & 0xf) < 10) ? ('0' + ((number >> (i << 2)) & 0xf)) : ('a' + ((number >> (i << 2)) & 0xf) - 10);
+						
+						char_index++;
+						break;	
+					}
 					default: printk("illegal syntax\n"); va_end(args); return;
 
 				}

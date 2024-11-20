@@ -1,4 +1,4 @@
-ARCH    = /home/kaveesha/Documents/github/linux_compile/buildroot/output/host/bin/riscv64-buildroot-linux-uclibc
+ARCH    = /opt/riscv/bin/riscv64-unknown-elf
 CC      = $(ARCH)-gcc
 FLAGS   = -nostartfiles -g -mcmodel=medany
 LD      = $(ARCH)-ld
