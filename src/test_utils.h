@@ -1,6 +1,11 @@
 #include <stdint.h>
 #include <stdarg.h>
 
+union freg {
+	uint32_t bits;
+	float f;
+};
+
 void printk (const char* text) {
 	uint32_t char_index;
 	while (text[char_index])
